@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/dienThongTinFragment">
+
+    <fragment
+        android:id="@+id/dienThongTinFragment"
+        android:name="vn.edu.ntu.quangnghia.gamehay1.DienThongTinFragment"
+        android:label="fragment_dien_thong_tin"
+        tools:layout="@layout/fragment_dien_thong_tin" >
+        <action
+            android:id="@+id/action_dienThongTinFragment_to_hienThiThongTinFragment"
+            app:destination="@id/hienThiThongTinFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hienThiThongTinFragment"
+        android:name="vn.edu.ntu.quangnghia.gamehay1.HienThiThongTinFragment"
+        android:label="fragment_hien_thi_thong_tin"
+        tools:layout="@layout/fragment_hien_thi_thong_tin" >
+        <action
+            android:id="@+id/action_hienThiThongTinFragment_to_dienThongTinFragment"
+            app:destination="@id/dienThongTinFragment" />
+    </fragment>
+</navigation>
